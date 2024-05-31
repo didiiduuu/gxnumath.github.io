@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- <script src="../js/index.js"></script> -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- 轮播图 -->
+        <ul class="list">
+            <li class="item active"><img src="../img/lunbo/0.jpg" alt=""></li>
+            <li class="item"><img src="../img/lunbo/1.jpg" alt=""></li>
+            <li class="item"><img src="../img/lunbo/2.jpg" alt=""></li>
+            <li class="item"><img src="../img/lunbo/3.jpg" alt=""></li>
+            <li class="item"><img src="../img/lunbo/4.jpg" alt=""></li>
+            <li class="item"><img src="../img/lunbo/5.jpg" alt=""></li>
+            <li class="item"><img src="../img/lunbo/6.jpg" alt=""></li>
+            <li class="item"><img src="../img/lunbo/7.jpg" alt=""></li>
+            <li class="item"><img src="../img/lunbo/8.png" alt=""></li>
+            <li class="item"><img src="../img/lunbo/9.png" alt=""></li>
+        </ul>
+        <ul class="pointList">
+            <li class="point active" data-index = 0></li>
+            <li class="point" data-index = 1></li>
+            <li class="point" data-index = 2></li>
+            <li class="point" data-index = 3></li>
+            <li class="point" data-index = 4></li>
+            <li class="point" data-index = 5></li>
+            <li class="point" data-index = 6></li>
+            <li class="point" data-index = 7></li>
+            <li class="point" data-index = 8></li>
+            <li class="point" data-index = 9></li>
+        </ul>
+        <!-- <img src="../carousel_img/0.jpg" alt="" class="bc"> -->
+    </div>
+
+    <!-- 顶部导航栏 -->
+    <!-- planA -->
+    <!-- <div class="nav-top">
+        <ul class="nav-top-list">
+            <li src="./1.html">Keynote Speakers</li>
+            <li src="./2.html">Short Courses</li>
+            <li src="./2.html">Registration & Submission</li>
+            <li src="./2.html">Accommodation & Transportation</li>
+            <li src="./3.html">Program</li>
+        </ul>
+    </div> -->
+    <!-- planB -->
+    <div class="nav-pc">
+        <ul class="w1400 nav-list">
+            <li src="./top-content/GoH.html">Guest of Honor</li>
+            <li src="./top-content/PlenarySpeaker.html">Plenary Speaker</li>
+            <li src="./top-content/ShortCourses.html">Short Courses</li>
+            <li src="./top-content/RS.html">Registration & Submission</li>
+            <li src="./tbe.html">Accommodation & Transportation</li>
+            <li src="./tbe.html">Program</li>
+        </ul>
+    </div>
+
+    <!-- 主体 -->
+    <div class="container" id="ct">
+        <div class="w1400">
+            <!-- 左侧导航栏 -->
+            <div class="con-l">
+                <div class="nav-left">
+                    <ul class="nav-left-list">
+                        <li src="./left-content/1.html">Home</li>
+                        <li src="./left-content/2.html">Important Notice</li>
+                        <li src="./left-content/3.html">Executive Committee</li>
+                        <li src="./left-content/4.html">Program Committee</li>
+                        <li src="./tbe.html">Junior Researcher Award Committee</li>
+                        <li src="./tbe.html">Organizing Committee</li>
+                        <li src="./tbe.html">Fund Raising Committee</li>
+                        <li src="./tbe.html">IT And Website Committee</li>
+                        <li src="./tbe.html">Local Organization Committee</li>
+                        <li src="./tbe.html">Poster Session Committee</li>
+                        <li src="./tbe.html">Program Book Committee</li>
+                        <li src="./tbe.html">Call For Junior Researcher Award</li>
+                        <li src="./tbe.html">Call For Invited Session Proposals</li>
+                        <li src="./tbe.html">Call For Short Courses</li>
+                        <li src="./tbe.html">Schedule</li>
+                        <li src="./tbe.html">Lectures & Sessions</li>
+                        <li src="./tbe.html">Sponsorship</li>
+                        <li src="./tbe.html">Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧内容 -->
+            <!-- <div class="con-2" id="c2"> -->
+            <div class="right-content" id="rc">
+                <iframe src="./left-content/1.html" frameborder="0" name="mainFrame" id="mainFrame" class="content"></iframe>
+            </div>
+            <!-- </div> -->
+            <!-- <iframe src="./1.html" frameborder="0" name="mainFrame" id="mainFrame" class="content"></iframe> -->
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="w1024">
+            <div class="links">
+                <div class="hvr-float"><a href="#" target="_blank">暂定</a></div>
+                <div class="hvr-float"><a href="#" target="_blank">暂定</a></div>
+                <div class="hvr-float"><a href="#" target="_blank">暂定</a></div>
+                <div class="hvr-float"><a href="#" target="_blank">暂定</a></div>
+            </div>
+            <div class="info">
+                <p>地址:暂定</p>
+                <p>邮编:暂定</p>
+                <p>电话:暂定</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- js -->
+    <!-- 顶部更改内容 -->
+    <script type="text/javascript">
+        let lis1 = document.querySelectorAll('.nav-list li')
+        let iframe1 = document.querySelector('iframe')
+        for(let i = 0; i < lis1.length; i++) {
+            lis1[i].onclick = function() {
+                for(let j = 0; j < lis1.length; j++) {
+                    lis1[j].removeAttribute('class', 'dot')
+                }
+                iframe1.setAttribute('src', lis1[i].getAttribute('src'))
+                this.setAttribute('class', 'dot')
+            }
+        }
+    </script>
+
+    <!-- 左侧更改内容 -->
+    <script type="text/javascript">
+        let lis2 = document.querySelectorAll('.nav-left-list li')
+        let iframe2 = document.querySelector('iframe')
+        for(let i = 0; i < lis2.length; i++) {
+            lis2[i].onclick = function() {
+                for(let j = 0; j < lis2.length; j++) {
+                    lis2[j].removeAttribute('class', 'dot')
+                }
+                iframe2.setAttribute('src', lis2[i].getAttribute('src'))
+                this.setAttribute('class', 'dot')
+            }
+        }           
+    </script>
+
+    <!-- 监听子页面发送的页面大小 -->
+    <script>
+        const p4 = document.querySelector(".content");
+        window.addEventListener("message", function(e) {
+            // p.innerHTML = `当前页面的高度为${e.data}`;
+            let height = 100;
+            height += parseInt(`${e.data}`);
+            p4.style.height = height + `px`;
+        });
+    </script>
+
+    <!-- 轮播图 -->
+    <script>
+        var items = document.querySelectorAll(".item");//图片
+        var points = document.querySelectorAll(".point")//点
+        var all = document.querySelector(".header")
+        var index = 0;
+        var time = 0;//定时器跳转参数初始化
+        
+        //清除active方法
+        var clearActive = function () {
+            for (i = 0; i < items.length; i++) {
+                items[i].className = 'item';
+            }
+            for (j = 0; j < points.length; j++) {
+                points[j].className = 'point';
+            }
+        }
+ 
+        //改变active方法
+        var goIndex = function () {
+            clearActive();
+            items[index].className = 'item active';
+            points[index].className = 'point active'
+        }
+
+        //右按钮事件
+        var goRight = function () {
+            if (index < 9) {
+                index++;
+            } else {
+                index = 0;
+            }
+            goIndex();
+        }
+        
+        for(i = 0; i < points.length; i++) {
+            points[i].addEventListener('click',function(){
+                var pointIndex = this.getAttribute('data-index')
+                index = pointIndex;
+                goIndex();
+                time = 0;//计时器跳转清零
+            })
+        }
+        //计时器
+        var timer;
+        function play() {
+            timer = setInterval(() => {
+                time ++;
+                if(time == 80 ){
+                    goRight();
+                    time = 0;
+                }    
+            },100)
+        }
+        play();
+        //移入清除计时器
+        all.onmousemove = function() {
+            clearInterval(timer);
+        }
+       //移出启动计时器
+        all.onmouseleave = function() {
+            play();
+        }
+    </script>
+    
+</body>
+</html>
