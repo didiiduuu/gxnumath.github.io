@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Committee</title>
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+    <div class="news-details">
+        <div class="title">Executive Committee</div>
+        <div class="content1">To be add</div>
+    </div>
+
+    <!-- 发送页面大小 -->
+    <script>
+        const body = document.body;
+        const observer = new MutationObserver(mutationsList => {
+            const currentHight = window.getComputedStyle(body, null).height;
+            console.log(currentHight)
+            top.postMessage(currentHight, "*");
+        });
+
+        observer.observe(body, {
+            attributes: true,
+            childList: true,
+            subtree: true
+        });
+    </script>
+</body>
+</html>
